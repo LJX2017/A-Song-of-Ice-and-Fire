@@ -41,11 +41,11 @@ def make_qa_chain():
     llm = ChatGoogleGenerativeAI(model="gemini-pro", convert_system_message_to_human=True)
     return RetrievalQA.from_chain_type(
         llm,
-        retriever=db.as_retriever(search_type="mmr", search_kwargs={"fetch_k":4}),
+        retriever=db.as_retriever(search_type="mmr", search_kwargs={"fetch_k":10}),
         return_source_documents=True
     )
 qa_chain = make_qa_chain()
-q = "tell me who is the king in chinese"
+q = "summerize the plot with given information"
 result = qa_chain({"query": q})
 print(result["result"],"\nsources:",)
 for idx, elt in enumerate(result["source_documents"]):
