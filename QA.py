@@ -28,7 +28,7 @@ def get_query(query: str, n_results=10):
         for sub_text in text:
             print(sub_text)
     return results
-get_query("谁是王？",3)
+get_query("谁是七国国王？",3)
 get_query("兰尼斯特家族",3)
 
 # print(get_query("卧槽",5))

@@ -42,7 +42,7 @@ def load_json():
             print("\n\n")
 def load_txt():
     count = 1
-    with open("background.txt", "r", encoding="utf-8") as file:
+    with open("books/background.txt", "r", encoding="utf-8") as file:
         docs = textwrap.wrap(file.read(), width=300)
     # for c in list(string.ascii_lowercase + string.ascii_uppercase):
     #     data = data.replace(c, "")
